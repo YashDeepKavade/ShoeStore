@@ -20,3 +20,9 @@ spring:
           starttls:
             enable: true
     username: yashdeepkavade77@gmail.com
+    
+    
+
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher

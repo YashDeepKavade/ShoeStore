@@ -4,7 +4,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import org.springframework.stereotype.Repository;
 
 import lombok.Data;
 
@@ -22,4 +26,10 @@ public class ProductEntity {
 	private Double price;
 	
 	private Integer quantity;
+	
+	@ManyToOne
+	@JoinColumn(name = "cartId")
+	private CartEntity cart;
+	
+	
 }
